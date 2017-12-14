@@ -136,6 +136,15 @@
 </div>
 
 
+<button>Save jSON</button>
+<script>
+    var fs = require('fs');
+    fs.writeFile("test.txt", jsonData, function(err) {
+        if(err) {
+            return console.log(err);
+        }
+    });
+</script>
 <footer class="footer">
     <div class="container">
         <span class="text-muted">Startsiden er verdens bedste startside.</span>
