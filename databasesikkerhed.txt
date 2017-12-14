@@ -1,0 +1,29 @@
+databasesikkerhed.txt
+
+
+En metode man kan bruge til at sikre sig imod sql injection er at have “prepared statements” der kan håndtere det input som brugeren indtaster. 
+
+Man starter med at “prepare” en sql statement f.eks : 
+$stmt = $conn->prepare("INSERT INTO MyGuests (firstname, lastname, email) VALUES (?, ?, ?)");
+
+$stmt->bind_param("sss", $firstname, $lastname, $email);
+
+
+sss argumentet betyder at de tre parametre vil blive håndteret som strings.
+
+Andre typer kan være 
+i - integer
+d - double
+b - BLOP
+
+når vores database system ved hvilken datatype den skal forvente, kan vi minimere risikoen for SQL injection.
+
+
+En anden måde kan være med “whitelist”. Her kan du i programmet håndtere hvilke tegn brugeren kan benytte sig af. Man kan f.eks vælge at brugeren kun kan indtaste tal, eller endnu bedre  at brugeren ikke kan indtaste “ ‘ * “ ; : _ osv, for at forhindre SQL injection 
+
+username " or ""="
+password " or ""="
+SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""=""
+denne sql sætning vil være “true” og returnere alle rows fra users
+
+(source: https://www.w3schools.com/sql/sql_injection.asp)

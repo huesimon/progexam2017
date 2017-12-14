@@ -1,0 +1,24 @@
+
+brugerdata.txt
+I den database vi fik udleveret blev bruger dataen opbevaret i “plain text”, det er jo ikke optimalt hvis nogle nu ville lave et SQL angreb, eller en sys admin havde lyst til at se brugernes passwords. 
+Man ville kunne “hashe” passwords når brugerne opretter sig, og derved kun gemme det hashed passwords i databasen.  Det vil sige at koden “lamePassword” ville blive gemt som:  00a284873fa8746571c6c03a039c39b8f07a44eccae013989956d07117d893a64ab527554849a770cf928770c192533a3db44bdaebee6d6b4ce5dd963d896664
+
+dette password blev genereret med algoritmen “whirlpool” 
+
+der findes mange andre algoritmer, f.eks md5, men den blev skiftet ud med SHA-1 da der blev fundet svagheder i md5.  Men i 2004 blev SHA-1 også udfaset . Der findes nu mange forskellige algoritmer .
+
+
+php har en hash funktion, hvor man har mulighed for at bruge: 
+md2
+md4
+md5
+sha1
+sha256
+sha384
+sha512 og mange mange flere. 
+
+hashing er ment til at være “en vejs, når man opretter sig som bruger, vil ens password blive hashed og gemt i databasen hashed. Det betyder så at hverken sys admin, eller eventuelle hackerer ville kunne se dit password i plain text. 
+
+Krypteret data vil sige at man ville kunne få det vist igen som plain text. Det bliver ofte brugt i instant messaging programmer.
+Telegram er udviklet af Pavel Durov, en russisk iværksætter. Der har i deres chat program en funktion der hedder “Secret Chat” hvor beskederne er krypteret med en nøgle som kun deltagerne af den chat har. Her er et link til deres kryptering protocol https://core.telegram.org/api/end-to-end
+“MTProto 2.0”

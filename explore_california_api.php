@@ -68,3 +68,5 @@ mysqli_close($link);
 
 //I min api har jeg kun implanteret GET request, hvis en api er RESTful skulle man også kunne manipulere med data
 // f.eks Create, Retrieve, Update, Delete (POST, GET, PUT, DELETE) men da denne opgave kun skulle vise json data, valgte jeg kun at impamentere GET
+
+//Jeg har ikke endnu lavet en java applikation som kan gemme JSON lokalt, men i saveJson.php har jeg gemt noget af json data som en .txt. Bare for at vise at jeg kan gemme nogle filer xD

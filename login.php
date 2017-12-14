@@ -71,7 +71,7 @@ echo "sql data:" . $sqlAdmin . "<br>" . $sqlPassword;
 //check if user info matches
 if ($admin == $sqlAdmin && $adminPassword == $sqlPassword){
     //correct password will send you to this page
-    header("Location: http://dr.dk");
+    header("Location: http://hammernemt.dk/simon/");
 
 }
 else{
