@@ -20,7 +20,11 @@ $.get(tours, function (data) {
                 // console.log(obj.foo);
                 console.log(obj.tourId);
                 //man kan bare tilføje flere felter fx obj.price
-                $("table").append("<tr> <td> <b> Tour ID :" + (obj.tourId) + "</b> </td> </tr>");
+
+                //part 2, nu viser den tour id, tour name , og price.
+                $("table").append("<tr> <td> <b>" + (obj.tourId) + "</b> " + "<td> " + (obj.tourName) +"</td><td> " + (obj.price) +"</td> </tr>");
+
+
             }
         });
 
