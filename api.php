@@ -35,8 +35,8 @@ for ($i=0;$i<count($columns);$i++) {
 //Denne switch bliver ikke brugt, kun fordi at det er fra et tidligere projekt
 switch ($method) {
     case 'GET':
-        $sql = "SELECT * FROM `$table`"; // henter alt data fra SQL
-    //        $sql = "SELECT * FROM `$table`  WHERE orders.ORD_ID=" . "'" .$key . "'";
+//        $sql = "SELECT * FROM `$table`"; // henter alt data fra SQL
+            $sql = "SELECT * FROM `$table`  WHERE tourId=" . "'" .$key . "'";
 
         break;
     case 'PUT':

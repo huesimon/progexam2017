@@ -57,6 +57,7 @@
 
 <h1>ProgExam</h1>
 <img src="images/map_bigsur.gif">
+
 <!--<img src="images/backpack_main.jpg">-->
 <div class="container">
     <table id="example" class="table table-striped  table-bordered table-hover" cellspacing="0"
@@ -111,9 +112,10 @@
 
 //                echo "<td>" . $row['graphic'] . "</td>";
 //
-                $imgURL = "images/" . $row['graphic'];
-                echo "<td>" . "<img src=\"images/map_bigsur.gif\"> </td>";
-                echo $imgURL;
+                echo "<td>";
+                echo '<img src="images/'.$row['graphic'].'"/>';
+//                echo '<img src="images/map_bigsur.gif"/>';
+                echo "</td>";
 
 
                 echo "</tr>";

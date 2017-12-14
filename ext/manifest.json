@@ -1,0 +1,28 @@
+{
+  "name": "API Show tours",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "API link to orders",
+  "homepage_url": "http://localhost/progexam/",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "chrome_url_overrides": {
+    "newtab": "src/override/override.html"
+  },
+  "permissions": [ "http://localhost/*"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js", "js/jquery/jquery.js", "js/tours.js"
+      ],
+      "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+    }
+  ]
+}
